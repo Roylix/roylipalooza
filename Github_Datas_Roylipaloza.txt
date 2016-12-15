@@ -1,0 +1,24 @@
+Github Datas Roylipaloza
+
+Se instalo un servidor para pruebas con un paquete de node.js
+Para servir archivos localmente como si fuera un servidor
+
+##
+npm install -g serve
+
+¬¬en mi caso se corre en la carpeta de este proyecto:
+/Users/MiMacbook/GitHub/roylipaloza
+
+Correr el servidor para testing 
+###
+serve .
+
+Los formularios se crean dentro de un div con clase input-group y dentro otro input-group-button para realizar la validacion con data-abide
+
+La navegacion fluida se hace en un <nav> con data-magellan
+
+Sticky Navigation
+data-sticky data-options
+
+Programar los enlaces del submenu de lineup container
+agregando codigo javascript en js/vendor/app.js
