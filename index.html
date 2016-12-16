@@ -12,45 +12,16 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <!-- Iconos Redes Sociales -->
-    <section id="social-container">
-      <div class="row align-center text-center">
-        <div class="column small-1">
-          <a href="#" target="_blank">
-            <i class="fi-social-facebook"></i> 
-          </a>
-        </div>
-        <div class="column small-1">
-          <a href="#" target="_blank">
-            <i class="fi-social-twitter"></i> 
-          </a>
-        </div>
-        <div class="column small-1">
-          <a href="#" target="_blank">
-            <i class="fi-social-instagram"></i> 
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Iconos Redes Sociales -->
-
-    <!-- Logo -->
-    <section id="logo-container">
-      <div class="callout text-center">
-        <h1>RoyliPalooza</h1>
-      </div>
-    </section>
-    <!-- Logo -->
-
-    <!-- Menu -->
-    <section data-sticky-container id="scrollSticky">
-      <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky">
-        <nav id="menu-container" data-magellan>
-          <ul class="menu icon-top dropdown align-spaced" data-dropdown-menu>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <!-- AQUI ESTA EL CONTENIDO DEL MENU OFF CANVAS EN MOVILES -->
+        <div id="offCanvas" class="off-canvas position-left" data-off-canvas>
+          <nav data-magellan>
+            <ul class="vertical menu" data-drilldown>
               <li><a href="#tickets-container"><i class="fi-ticket"></i>Tickets</a></li>
               <li>
                 <a href="#lineup-container"><i class="fi-music"></i>LineUp</a>
-                <ul id="submenu-container" class="menu">
+                <ul id="submenu2" class="vertical menu">
                   <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
                   <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
                   <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
@@ -58,272 +29,329 @@
               </li>
               <li><a href="#info-container"><i class="fi-info"></i>Info</a></li>
               <li><a href="#suscribete-container"><i class="fi-book-bookmark"></i>Suscribete</a></li>
-          </ul>  
-        </nav>  
-      </div>      
-    </section>
-    <!-- Menu -->
-
-    <!-- Tickets -->
-    <section id="tickets-action">
-      <div class="callout medium text-center">
-        <a href="#">
-          <button class="warning large button align-self-stretch">Comprar Boletos</button>
-        </a>
-      </div>
-    </section>
-    <!-- Tickets -->
-
-    <!-- Line Up -->
-    <section id="lineup-container" data-magellan-target="lineup-container">
-      <h3 class="text-center">Line Up</h3>
-
-      <ul class="tabs text-center" data-tabs id="lineup-tabs">
-        <li class="tabs-title is-active"> 
-          <a href="#panelViernes">Viernes</a>
-          <!-- Se agregan ala clase tabs title display inline block y display none para centrarlos porque foundation no deja centrar los tabs-title -->
-        </li>
-        <li class="tabs-title">
-          <a href="#panelSabado">Sabado</a>
-        </li>
-        <li class="tabs-title">
-          <a href="#panelDomingo">Domingo</a>
-        </li>
-      </ul>
-      <!-- Para que Foundation sepa cual es el menu de navegacion de estos tabs le colocamos el id del menu -->
-      <div class="tabs-content" data-tabs-content="lineup-tabs">
-        <!-- PEARL JAM -->
-        <div class="tabs-panel is-active" id="panelViernes">
-            <div class="row">
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/pj_rocking.jpg" alt="Pearl Jam">
-                         <figcaption class="orbit-caption">Pearl Jam Rockin in a Free World!!!</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/pj_pinpok.jpg" alt="Pearl Jam">
-                         <figcaption class="orbit-caption">Pearl Jam in Pinpok Festival 92</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/pj_nir.jpg" alt="Pearl Jam">
-                         <figcaption class="orbit-caption">Pearl Jam - Ten  VS Nirvana - Nevermind</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/pj_porch.jpg" alt="Pearl Jam">
-                         <figcaption class="orbit-caption">Pearl Jam - Porch MTV Unplugged</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/pj_jump.jpg" alt="Pearl Jam">
-                         <figcaption class="orbit-caption">Pearl Jam - Atlanta 1994</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/pj_95.jpg" alt="Pearl Jam">
-                         <figcaption class="orbit-caption">Pearl Jam - Chicago 1995</figcaption>
-                      </div>
-                  </div>
-              </div>
-            </div>
+            </ul>
+          </nav>
         </div>
-        <!-- SOUNDGARDEN -->
-        <div class="tabs-panel" id="panelSabado">
-            <div class="row">
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img class="orbit-image" src="images/Soundgarden/sg_06_1.png" alt="SoundGarden">
-                         <figcaption class="orbit-caption">SoundGarden Rockin in a Free World!!!</figcaption>
-                      </div>
-                  </div>
+          <!-- TODO EL CONTENIDO DEL SITIO IRA ACA PARA DESPLAZARLO ALA DERECHA -->
+        <div class="off-canvas-content" data-off-canvas-content>
+            <!-- Iconos Redes Sociales -->
+            <section id="social-container">
+              <div class="row align-center text-center">
+                <div class="column small-1">
+                  <a href="http://www.facebook.com/roylix" target="_blank">
+                    <i class="fi-social-facebook"></i> 
+                  </a>
+                </div>
+                <div class="column small-1">
+                  <a href="http://www.twitter.com/roylix" target="_blank">
+                    <i class="fi-social-twitter"></i> 
+                  </a>
+                </div>
+                <div class="column small-1">
+                  <a href="http://www.github.com/roylix" target="_blank">
+                    <i class="fi-social-instagram"></i> 
+                  </a>
+                </div>
               </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img sclass="orbit-image" src="images/Soundgarden/sg_06.jpg" alt="SoundGarden">
-                         <figcaption class="orbit-caption">SoundGarden</figcaption>
-                      </div>
-                  </div>
+            </section>
+            <!-- Iconos Redes Sociales -->
+
+            <!-- Logo -->
+            <section id="logo-container">
+              <div class="callout text-center">
+                <h1>RoyliPalooza</h1>
               </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img sclass="orbit-image" src="images/Soundgarden/sg_02.jpg" alt="SoundGarden">
-                         <figcaption class="orbit-caption">SoundGarden - Atlanta 1994</figcaption>
-                      </div>
-                  </div>
+            </section>
+            <!-- Logo -->
+
+            <!-- Menu -->
+            <section data-sticky-container id="scrollSticky">
+              <div class="data-sticky" data-sticky id="sticky" data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky">
+                <nav id="menu-container" data-magellan>
+                  <ul class="menu align-spaced show-for-small-only">
+                    <li><a href="#" data-toggle="offCanvas">Menu</a></li>
+                  </ul>
+                  <ul class="menu icon-top dropdown align-spaced show-for-medium" data-dropdown-menu>
+                      <li><a href="#tickets-container"><i class="fi-ticket"></i>Tickets</a></li>
+                      <li>
+                        <a href="#lineup-container"><i class="fi-music"></i>LineUp</a>
+                        <ul id="submenu-container" class="menu">
+                          <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                          <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
+                          <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#info-container"><i class="fi-info"></i>Info</a></li>
+                      <li><a href="#suscribete-container"><i class="fi-book-bookmark"></i>Suscribete</a></li>
+                  </ul>  
+                </nav>  
+              </div>      
+            </section>
+            <!-- Menu -->
+
+            <!-- Tickets -->
+            <section id="tickets-action">
+              <div class="callout medium text-center">
+                <a href="#">
+                  <button class="warning large button align-self-stretch">Comprar Boletos</button>
+                </a>
               </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img sclass="orbit-image" src="images/Soundgarden/sg_04.jpg" alt="SoundGarden">
-                         <figcaption class="orbit-caption">SoundGarden - Chicago 1998</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img sclass="orbit-image" src="images/Soundgarden/sg_05.jpg" alt="SoundGarden">
-                         <figcaption class="orbit-caption">SoundGarden - Atlanta 1994</figcaption>
-                      </div>
-                  </div>
-              </div>
-              <div class="small-12 medium-6 column">                  
-                  <div class="orbit-container">
-                      <div class="orbit-slider">
-                         <img sclass="orbit-image" src="images/Soundgarden/sg_01.jpg" alt="SoundGarden">
-                         <figcaption class="orbit-caption">SoundGarden - Portada</figcaption>
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-        <div class="tabs-panel" id="panelDomingo">
-            <!-- TEMPLE OF THE DOG -->
-                <div class="row">
-                  <div class="small-12 medium-6 column">                  
-                      <div class="orbit-container">
-                          <div class="orbit-slider">
-                             <img class="orbit-image" src="images/temple/tod_03.jpg" alt="Temple of The Dog">
-                             <figcaption class="orbit-caption">Portada</figcaption>
+            </section>
+            <!-- Tickets -->
+
+            <!-- Line Up -->
+            <section id="lineup-container" data-magellan-target="lineup-container">
+              <h3 class="text-center">Line Up</h3>
+
+              <ul class="tabs text-center" data-tabs id="lineup-tabs">
+                <li class="tabs-title is-active"> 
+                  <a href="#panelViernes">Viernes</a>
+                  <!-- Se agregan ala clase tabs title display inline block y display none para centrarlos porque foundation no deja centrar los tabs-title -->
+                </li>
+                <li class="tabs-title">
+                  <a href="#panelSabado">Sabado</a>
+                </li>
+                <li class="tabs-title">
+                  <a href="#panelDomingo">Domingo</a>
+                </li>
+              </ul>
+              <!-- Para que Foundation sepa cual es el menu de navegacion de estos tabs le colocamos el id del menu -->
+              <div class="tabs-content" data-tabs-content="lineup-tabs">
+                <!-- PEARL JAM -->
+                <div class="tabs-panel is-active" id="panelViernes">
+                    <div class="row">
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/pj_rocking.jpg" alt="Pearl Jam">
+                                 <figcaption class="orbit-caption">Pearl Jam Rockin in a Free World!!!</figcaption>
+                              </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="small-12 medium-6 column">                  
-                      <div class="orbit-container">
-                          <div class="orbit-slider">
-                             <img sclass="orbit-image" src="images/temple/tod_02.jpg" alt="Temple of The Dog">
-                             <figcaption class="orbit-caption">Temple of The Dog</figcaption>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/pj_pinpok.jpg" alt="Pearl Jam">
+                                 <figcaption class="orbit-caption">Pearl Jam in Pinpok Festival 92</figcaption>
+                              </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="small-12 medium-6 column">                  
-                      <div class="orbit-container">
-                          <div class="orbit-slider">
-                             <img sclass="orbit-image" src="images/temple/tod_01.jpg" alt="Temple of The Dog">
-                             <figcaption class="orbit-caption">Temple of The Dog - Atlanta 1994</figcaption>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/pj_nir.jpg" alt="Pearl Jam">
+                                 <figcaption class="orbit-caption">Pearl Jam - Ten  VS Nirvana - Nevermind</figcaption>
+                              </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="small-12 medium-6 column">                  
-                      <div class="orbit-container">
-                          <div class="orbit-slider">
-                             <img sclass="orbit-image" src="images/temple/tod_04.jpg" alt="Temple of The Dog">
-                             <figcaption class="orbit-caption">Temple of The Dog - Chicago 1998</figcaption>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/pj_porch.jpg" alt="Pearl Jam">
+                                 <figcaption class="orbit-caption">Pearl Jam - Porch MTV Unplugged</figcaption>
+                              </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="small-12 medium-6 column">                  
-                      <div class="orbit-container">
-                          <div class="orbit-slider">
-                             <img sclass="orbit-image" src="images/temple/tod_05.png" alt="Temple of The Dog">
-                             <figcaption class="orbit-caption">Temple of The Dog - Atlanta 1994</figcaption>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/pj_jump.jpg" alt="Pearl Jam">
+                                 <figcaption class="orbit-caption">Pearl Jam - Atlanta 1994</figcaption>
+                              </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="small-12 medium-6 column">                  
-                      <div class="orbit-container">
-                          <div class="orbit-slider">
-                             <img sclass="orbit-image" src="images/temple/tod_05.png" alt="Temple of The Dog">
-                             <figcaption class="orbit-caption">Temple of The Dog - Atlanta 1994</figcaption>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/pj_95.jpg" alt="Pearl Jam">
+                                 <figcaption class="orbit-caption">Pearl Jam - Chicago 1995</figcaption>
+                              </div>
                           </div>
                       </div>
+                    </div>
+                </div>
+                <!-- SOUNDGARDEN -->
+                <div class="tabs-panel" id="panelSabado">
+                    <div class="row">
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img class="orbit-image" src="images/Soundgarden/sg_06_1.png" alt="SoundGarden">
+                                 <figcaption class="orbit-caption">SoundGarden Rockin in a Free World!!!</figcaption>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img sclass="orbit-image" src="images/Soundgarden/sg_06.jpg" alt="SoundGarden">
+                                 <figcaption class="orbit-caption">SoundGarden</figcaption>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img sclass="orbit-image" src="images/Soundgarden/sg_02.jpg" alt="SoundGarden">
+                                 <figcaption class="orbit-caption">SoundGarden - Atlanta 1994</figcaption>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img sclass="orbit-image" src="images/Soundgarden/sg_04.jpg" alt="SoundGarden">
+                                 <figcaption class="orbit-caption">SoundGarden - Chicago 1998</figcaption>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img sclass="orbit-image" src="images/Soundgarden/sg_05.jpg" alt="SoundGarden">
+                                 <figcaption class="orbit-caption">SoundGarden - Atlanta 1994</figcaption>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="small-12 medium-6 column">                  
+                          <div class="orbit-container">
+                              <div class="orbit-slider">
+                                 <img sclass="orbit-image" src="images/Soundgarden/sg_01.jpg" alt="SoundGarden">
+                                 <figcaption class="orbit-caption">SoundGarden - Portada</figcaption>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="tabs-panel" id="panelDomingo">
+                    <!-- TEMPLE OF THE DOG -->
+                        <div class="row">
+                          <div class="small-12 medium-6 column">                  
+                              <div class="orbit-container">
+                                  <div class="orbit-slider">
+                                     <img class="orbit-image" src="images/temple/tod_03.jpg" alt="Temple of The Dog">
+                                     <figcaption class="orbit-caption">Portada</figcaption>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="small-12 medium-6 column">                  
+                              <div class="orbit-container">
+                                  <div class="orbit-slider">
+                                     <img sclass="orbit-image" src="images/temple/tod_02.jpg" alt="Temple of The Dog">
+                                     <figcaption class="orbit-caption">Temple of The Dog</figcaption>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="small-12 medium-6 column">                  
+                              <div class="orbit-container">
+                                  <div class="orbit-slider">
+                                     <img sclass="orbit-image" src="images/temple/tod_01.jpg" alt="Temple of The Dog">
+                                     <figcaption class="orbit-caption">Temple of The Dog - Atlanta 1994</figcaption>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="small-12 medium-6 column">                  
+                              <div class="orbit-container">
+                                  <div class="orbit-slider">
+                                     <img sclass="orbit-image" src="images/temple/tod_04.jpg" alt="Temple of The Dog">
+                                     <figcaption class="orbit-caption">Temple of The Dog - Chicago 1998</figcaption>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="small-12 medium-6 column">                  
+                              <div class="orbit-container">
+                                  <div class="orbit-slider">
+                                     <img sclass="orbit-image" src="images/temple/tod_05.png" alt="Temple of The Dog">
+                                     <figcaption class="orbit-caption">Temple of The Dog - Atlanta 1994</figcaption>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="small-12 medium-6 column">                  
+                              <div class="orbit-container">
+                                  <div class="orbit-slider">
+                                     <img sclass="orbit-image" src="images/temple/tod_05.png" alt="Temple of The Dog">
+                                     <figcaption class="orbit-caption">Temple of The Dog - Atlanta 1994</figcaption>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    
+                </div>
+              </div>
+            </section>
+            <!-- Line Up -->
+
+            <!-- Compra de Boletos -->
+            <section id="tickets-container" data-magellan-target="tickets-container">
+              <h3 class="text-center">Comprar Boletos</h3> 
+              <div class="row" data-equalizer data-equalize-on="small">
+                  <div class="column small-10 small-offset-1 medium-6 medium-offset-3">
+                    <ul class="pricing-table no-bullet text-center">
+                      <li class="title">Platino</li>
+                      <li class="price">$120</li>
+                      <li class="description">Acceso Viernes, Sabado y Domingo</li>
+                      <li>2 Bebidas por cada dia</li>
+                      <li>Parqueadero incluido todos los dias</li>
+                      <li>Participa en un sorteo para acceder al backstage</li>
+                      <li><a class="button" href="#">Comprar Platino</a></li>
+                    </ul>
+                  </div>
+                  <div class="column small-6 medium-4 medium-offset-2">
+                    <ul class="pricing-table no-bullet text-center">
+                      <li class="title">Gold</li>
+                      <li class="price">$90</li>
+                      <li class="description">Acceso Viernes, Sabado y Domingo</li>
+                      <li data-equalizer-watch>Una Bebida incluida por cada dia</li>
+                      <li>-</li>
+                      <li>-</li>
+                      <li><a class="button smally" href="#">Comprar Gold</a></li>
+                    </ul>
+                  </div>
+                  <div class="column small-6 medium-4">
+                    <ul class="pricing-table no-bullet text-center">
+                      <li class="title">Silver</li>
+                      <li class="price">$65</li>
+                      <li class="description">Acceso Viernes, Sabado y Domingo</li>
+                      <li data-equalizer-watch>-</li>
+                      <li>-</li>
+                      <li>-</li>
+                      <li><a class="button smally" href="#">Comprar Silver</a></li>
+                    </ul>
+                  </div>
+              </div>
+            </section>
+            <!-- Suscribete -->
+            <section id="suscribete-container" data-magellan-target="suscribete-container">
+              <h3 class="text-center">Suscribete</h3>
+              <h4 class="text-center"><small>Y recibe las ultimas novedades del concierto</small></h4>
+              <form action="" method="" novalidate data-abide>
+                <div data-abide-error class="row columns small-12 medium-6 text-center error-container" style="display:none">
+                  <p><i class="fi-alert"></i>Ingreso un Correo electronico no valido</p>
+                </div>
+                <div class="row columns small-12 medium-6">
+                  <div class="input-group">
+                    <span class="input-group-label"><i class="fi-mail"></i></span>  
+                    <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
+                    <div class="input-group-button">
+                      <input type="submit" class="button" value="Suscribirse">
+                    </div>
                   </div>
                 </div>
-            
-        </div>
-      </div>
-    </section>
-    <!-- Line Up -->
+              </form>
+            </section>
+            <!-- Suscribete -->
 
-    <!-- Compra de Boletos -->
-    <section id="tickets-container" data-magellan-target="tickets-container">
-      <h3 class="text-center">Comprar Boletos</h3> 
-      <div class="row" data-equalizer data-equalize-on="small">
-          <div class="column small-10 small-offset-1 medium-6 medium-offset-3">
-            <ul class="pricing-table no-bullet text-center">
-              <li class="title">Platino</li>
-              <li class="price">$120</li>
-              <li class="description">Acceso Viernes, Sabado y Domingo</li>
-              <li>2 Bebidas por cada dia</li>
-              <li>Parqueadero incluido todos los dias</li>
-              <li>Participa en un sorteo para acceder al backstage</li>
-              <li><a class="button" href="#">Comprar Platino</a></li>
-            </ul>
-          </div>
-          <div class="column small-6 medium-4 medium-offset-2">
-            <ul class="pricing-table no-bullet text-center">
-              <li class="title">Gold</li>
-              <li class="price">$90</li>
-              <li class="description">Acceso Viernes, Sabado y Domingo</li>
-              <li data-equalizer-watch>Una Bebida incluida por cada dia</li>
-              <li>-</li>
-              <li>-</li>
-              <li><a class="button smally" href="#">Comprar Gold</a></li>
-            </ul>
-          </div>
-          <div class="column small-6 medium-4">
-            <ul class="pricing-table no-bullet text-center">
-              <li class="title">Silver</li>
-              <li class="price">$65</li>
-              <li class="description">Acceso Viernes, Sabado y Domingo</li>
-              <li data-equalizer-watch>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li><a class="button smally" href="#">Comprar Silver</a></li>
-            </ul>
-          </div>
+            <!-- Info -->
+            <section id="info-container" data-magellan-target="info-container">
+              <h3 class="text-center">Informacion</h3>
+              <div class="info-map" data-interchange="[assets/map-small.html, small], [assets/map.html, medium]">
+                <!-- <img data-interchange="[images/pj_pinpok.jpg, small], [images/temple/tod_03.jpg, medium], [images/temple/tod_05.png, large]"> -->
+              </div>
+            </section>
+        </div> 
+        <!-- Fin de off canvas content -->
       </div>
-    </section>
-    <!-- Suscribete -->
-    <section id="suscribete-container" data-magellan-target="suscribete-container">
-      <h3 class="text-center">Suscribete</h3>
-      <h4 class="text-center"><small>Y recibe las ultimas novedades del concierto</small></h4>
-      <form action="" method="" novalidate data-abide>
-        <div data-abide-error class="row columns small-12 medium-6 text-center error-container" style="display:none">
-          <p><i class="fi-alert"></i>Ingreso un Correo electronico no valido</p>
-        </div>
-        <div class="row columns small-12 medium-6">
-          <div class="input-group">
-            <span class="input-group-label"><i class="fi-mail"></i></span>  
-            <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
-            <div class="input-group-button">
-              <input type="submit" class="button" value="Suscribirse">
-            </div>
-          </div>
-        </div>
-      </form>
-    </section>
-    <!-- Suscribete -->
-
-    <!-- Info -->
-    <section id="info-container" data-magellan-target="info-container">
-      <h3 class="text-center">Informacion</h3>
-      <div class="info-map" data-interchange="[assets/map-small.html, small], [assets/map.html, medium]">
-        <!-- <img data-interchange="[images/pj_pinpok.jpg, small], [images/temple/tod_03.jpg, medium], [images/temple/tod_05.png, large]"> -->
-      </div>
-    </section>
-
+    </div>    
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>

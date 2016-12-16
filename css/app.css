@@ -1,5 +1,6 @@
 body{
-	background-color: #31415A;
+	/*background-color: #31415A;*/
+	background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
@@ -22,11 +23,15 @@ h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
 
 #menu-container li a{
 	color: white;
-	font-family: 'Bree Serif'
+	font-family: 'Bree Serif';
+	text-transform: uppercase;
+	/*padding: 1.3em 0px;*/
 }
 
 #submenu-container {
 	border: 0;
+/*	margin: 0 -.5em;
+	padding: 0 .5em;*/
 }
 
 #menu-container li a:hover,
@@ -49,7 +54,7 @@ h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
 	border: 1px solid white;
 }*/
 #lineup-container{
-	padding: .5em 0;
+	padding: 2em 0;  /*modificado a 2em para ver en tablets*/
 }
 
 #lineup-container,
@@ -107,6 +112,7 @@ h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
 #tickets-container{
 	padding: 1em 0;
 	color: white;
+	background-color: #31415A;
 }
 #tickets-action button{
 	margin: 0;
@@ -189,11 +195,32 @@ h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
 	z-index: 100;
 }
 
-.menu > li > a{
+/*.menu > li > a{
 	padding: 0.7rem .5rem;
 	line-height: .5;
-}
+}*/
 
 .button{
 	font-size: 0.8rem;
 }
+
+/*estilos para el menu off canvas*/
+#offCanvas,
+#offCanvas li a{
+	background-color: black;
+	font-family: 'Bree Serif', serif;
+	text-align: bottom;
+}
+
+#offCanvas #submenu2 li a{
+	padding: .7em 0;	
+}
+
+#offCanvas .is-drilldown-submenu-parent > a::after{
+	border-color: transparent transparent transparent white;
+}
+
+#offCanvas .js-drilldown-back > a::before{
+	border-color: transparent white transparent transparent;
+}
+
